@@ -1,0 +1,9 @@
+# Deprecated - use js/ directory instead
+# components.js
+# main.js
+
+# System files
+.DS_Store
+.env
+node_modules/
+*.log
