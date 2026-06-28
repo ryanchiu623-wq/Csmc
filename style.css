@@ -543,4 +543,25 @@ footer span { color: var(--text-muted); }
   .hero { padding-top: calc(var(--nav-h) + 48px); padding-bottom: 48px; }
   .section { padding: 56px 0; }
   .home-hero h1 { font-size: 32px; }
+  
+  /* 修復 careers.html VALUES 區段：3 欄轉 1 欄 */
+  [style*="grid-template-columns: repeat(3, 1fr)"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* 修復 careers.html 職缺項目：flex 布局改為 column 堆疊 */
+  [style*="display: flex"][style*="align-items: center"][style*="justify-content: space-between"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  [style*="display: flex"][style*="align-items: center"][style*="justify-content: space-between"] > div {
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+  
+  [style*="display: flex"][style*="align-items: center"][style*="justify-content: space-between"] > a {
+    width: 100% !important;
+  }
 }
