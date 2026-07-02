@@ -299,9 +299,14 @@ input, textarea, button { font-family: inherit; }
 .products-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
 .product-card {
   display: grid; grid-template-columns: 280px 1fr;
-  background: var(--bg-card); transition: background var(--trans);
+  background: var(--bg-card); transition: background var(--trans), transform var(--trans);
+  transform-origin: center;
 }
-.product-card:hover { background: var(--bg-card-2); }
+.product-card:hover { 
+  background: var(--bg-card-2);
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(192,57,43,0.2);
+}
 .product-img {
   aspect-ratio: 4/3; position: relative; overflow: hidden;
 }
